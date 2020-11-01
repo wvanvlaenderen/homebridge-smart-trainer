@@ -7,6 +7,7 @@ import {
   Service,
 } from "homebridge";
 import { CyclingService } from "./cycling.service";
+import { distinctUntilChanged } from "rxjs/operators";
 
 let hap: HAP;
 
@@ -29,12 +30,15 @@ class SmartTrainer implements AccessoryPlugin {
 
     this.sensorService = new hap.Service.ContactSensor(this.name);
 
-    this.cyclingService.isCycling$().subscribe(state => {
-      this.sensorService.updateCharacteristic(
-        hap.Characteristic.ContactSensorState,
-        state,
-      );
-    });
+    this.cyclingService
+      .isCycling$()
+      .pipe(distinctUntilChanged())
+      .subscribe(state => {
+        this.sensorService.updateCharacteristic(
+          hap.Characteristic.ContactSensorState,
+          state,
+        );
+      });
 
     log.info("Smart trainer finished initializing!");
   }

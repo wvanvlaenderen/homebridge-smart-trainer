@@ -4,7 +4,12 @@
 [![Downloads](https://img.shields.io/npm/dt/homebridge-smart-trainer.svg)](https://www.npmjs.org/package/homebridge-smart-trainer)
 [![Build Status](https://travis-ci.org/wvanvlaenderen/homebridge-smart-trainer.svg?branch=master)](https://travis-ci.org/wvanvlaenderen/homebridge-smart-trainer)
 [![Dependencies](https://david-dm.org/wvanvlaenderen/homebridge-smart-trainer.svg)](https://david-dm.org/wvanvlaenderen/homebridge-smart-trainer)
-Homebridge accessory exposing a BLE controlled smart cycling trainer as a contact sensor. Once configured in Homebridge the plugin will scan for BLE devices exposing the BLE Cycling Measurement service. Once one of these services starts emitting power values the sensor is triggered, allowing to control lights/scenes through Homekit
+
+Homebridge accessory exposing a BLE controlled smart cycling trainer as a contact sensor. 
+
+Once configured in Homebridge the plugin will scan for BLE devices exposing the BLE Cycling Measurement service. Once one of these services starts emitting power values the sensor is triggered, allowing to control lights/scenes through Homekit.
+
+The sensor should support all smart trainers which support the Cycling Service descriptor. Both Tacx and Wahoo are verified to use this service at the moment of writing.
 
 Supported actions include:
 * start cycling

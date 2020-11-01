@@ -1,7 +1,7 @@
 import { ReplaySubject } from "rxjs";
 import { Logging } from "homebridge";
 
-import noble from "noble-mac";
+import noble from "@abandonware/noble";
 
 const SERVICE_CYLING_POWER_SERVICE = "1818";
 const CHARACTERISTIC_CYLING_POWER_MEASUREMENT = "2a63";
