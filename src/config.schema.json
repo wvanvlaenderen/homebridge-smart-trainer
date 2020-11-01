@@ -1,0 +1,14 @@
+{
+  "pluginAlias": "SmartTrainer",
+  "pluginType": "accessory",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "host": {
+        "title": "name",
+        "type": "string",
+        "required": false
+      }
+    }
+  }
+}
