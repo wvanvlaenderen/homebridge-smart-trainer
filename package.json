@@ -1,6 +1,6 @@
 {
   "name": "homebridge-smart-trainer",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Smart trainer support",
   "license": "MIT",
   "keywords": [
@@ -29,15 +29,15 @@
   "dependencies": {
     "@types/node": "^13.13.4",
     "rxjs": "^6.5.5",
-    "noble-mac": "https://github.com/Timeular/noble-mac.git",
-    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head",
-    "typescript": "^3.8.3",
-    "xpc-connect": "^2.0.0"
+    "@abandonware/noble": "^1.9.2-10",
+    "typescript": "^3.8.3"
+  },
+  "optionalDependencies": {
+    "bluetooth-hci-socket": "0.5.1",
+    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
   },
   "devDependencies": {
-    "@types/noble-mac": "0.0.2",
     "homebridge": "^1.1.0",
-    "noble": "^1.9.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "tslint": "^5.20.1",
